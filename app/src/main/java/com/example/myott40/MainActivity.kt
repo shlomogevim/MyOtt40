@@ -4,7 +4,6 @@ import android.animation.AnimatorInflater
 import android.content.res.Resources
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.media.MediaPlayer
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -84,7 +83,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun createOtt() {
         otts = ArrayList()
-        val int00 = 60
+        val right0 = 60
+        val right1 = 60
         val int0 = -20
         val int1 = -40
         val int2 = 0
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         val int4 = 30
         val int44 = 30
         val scale0 = 120
-        val scale1 = 60
+        val scale1 = 120
         val scale2 = 60
         val scale4 = 60
         val bottom0 = 600
@@ -103,9 +103,21 @@ class MainActivity : AppCompatActivity() {
 
         otts = arrayListOf(
 
-            Ott(mV("ח"), 0, scale0+10, scale0+10, 80 + int00, bottom0),
-            Ott(mV("פ"), 1, scale0, scale0, 160 + int00, bottom0),
-            Ott(mV("ש"), 2, scale0 - 20, scale0 - 20, 225 + int00, bottom0 +10)
+            Ott(mV("ח"), 0, scale0+10, scale0+10, 80 + right0, bottom0+0),
+            Ott(mV("פ"), 1, scale0+0 ,scale0+0, 160 + right0, bottom0+0),
+            Ott(mV("ש"), 2, scale0-20, scale0 - 20, 225 + right0, bottom0 +10),
+
+            Ott(mV("א"), 3, scale1+0 , scale1 +0, 225 + right1, buttom1 +10)
+
+
+
+
+
+
+
+
+
+
             /* Ott(mV("ם"), 3, scale0 - 15, scale0 - 15, 283 + int00, bottom0 - 1)
 
                Ott(mV("ג"), 4, scale1, scale1, 100 + int0, buttom1),
