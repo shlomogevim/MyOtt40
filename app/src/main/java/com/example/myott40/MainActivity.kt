@@ -17,7 +17,7 @@ import kotlinx.coroutines.*
 class MainActivity : AppCompatActivity() {
     lateinit var util: Uties
     var counter = 0
-    private var animationMode = true
+    private var animationMode = false
     lateinit var otts: ArrayList<Ott>
     private var videoBG: VideoView? = null
     var mMediaPlayer: MediaPlayer? = null
@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         //  util.videoBackgroundPreperation()
 
-      /*  mainLayout.setBackgroundResource(R.drawable.paper)
+        animationMode = true
+       /* mainLayout.setBackgroundResource(R.drawable.paper)
         videoView.visibility=View.INVISIBLE*/
 
             //   mainLayout.setOnClickListener {
@@ -83,31 +84,68 @@ class MainActivity : AppCompatActivity() {
 
     private fun createOtt() {
         otts = ArrayList()
+        val bottom0 = 605
+        val buttom1 = 550
+        val buttom2 = 410
+        val buttom3 = 295
+        val buttom4 = 242
         val right0 = 60
-        val right1 = 60
-        val int0 = -20
-        val int1 = -40
-        val int2 = 0
-        val int3 = 165
-        val int4 = 30
-        val int44 = 30
+        val right1 = 45
+        val right11 = 40
+        val right2 = 40
+        val right3 = 40
+        val right4= 25
+        val right40= 25
+        val right41= 15
+        val right42= 20
         val scale0 = 120
-        val scale1 = 120
-        val scale2 = 60
-        val scale4 = 60
-        val bottom0 = 600
-        val buttom1 = 570
-        val buttom2 = 565
-        val buttom3 = 565
-        val buttom4 = 500
-
+        val scale1 = 110
+        val scale2 = 100
+        val scale3 = 70
+        val scale4 = 40
         otts = arrayListOf(
+            Ott(mV("ח"), 0, scale0+10, scale0+10, 80 + right0, bottom0+10),
+            Ott(mV("פ"), 1, scale0+0 ,scale0+0, 160 + right0, bottom0+20),
+            Ott(mV("ש"), 2, scale0-20, scale0 - 25, 225 + right0, bottom0 +30),
 
-            Ott(mV("ח"), 0, scale0+10, scale0+10, 80 + right0, bottom0+0),
-            Ott(mV("פ"), 1, scale0+0 ,scale0+0, 160 + right0, bottom0+0),
-            Ott(mV("ש"), 2, scale0-20, scale0 - 20, 225 + right0, bottom0 +10),
+         Ott(mV("א"), 3, scale1+0 , scale1 +0, 30 + right1, buttom1 -10),
+         Ott(mV("ת"), 4, scale1+0 , scale1 -10, 90 + right1, buttom1 -20),
 
-            Ott(mV("א"), 3, scale1+0 , scale1 +0, 225 + right1, buttom1 +10)
+         Ott(mV("ה"), 5, scale1+0 , scale1 -10, 182 + right11, buttom1-10),
+         Ott(mV("א"), 6, scale1+0 , scale1 +0, 255 + right11, buttom1 -10),
+         Ott(mV("ו"), 7, scale1+0 , scale1 +0, 285 + right11, buttom1 -10),
+         Ott(mV("ר"), 8, scale1+0 , scale1 +0, 321 + right11, buttom1-20 ),
+
+         Ott(mV("ב"), 9, scale2+0 , scale2 +0, 100 + right2, buttom2-0 ),
+         Ott(mV("י"), 10, scale2+0 , scale2 +0, 135 + right2, buttom2-0 ),
+         Ott(mV("נ"), 11, scale2+0 , scale2 +0, 170 + right2, buttom2-10 ),
+         Ott(mV("י"), 12, scale2+0 , scale2 +0, 190 + right2, buttom2-0 ),
+         Ott(mV("נ"), 13, scale2+0 , scale2 +0, 225 + right2, buttom2-10 ),
+         Ott(mV("ו"), 14, scale2+0 , scale2 +0, 250 + right2, buttom2-0 ),
+
+         Ott(mV("ח"), 15, scale3+0 , scale3 +0, 50 + right3, buttom3-0 ),
+         Ott(mV("ו"), 16, scale3+0 , scale3 +0, 73 + right3, buttom3+5 ),
+         Ott(mV("ש"), 17, scale3+0 , scale3 +0, 95 + right3, buttom3-0 ),
+         Ott(mV("ך"), 18, scale3+0 , scale3 +0, 130 + right3, buttom3-10),
+
+         Ott(mV("י"), 19, scale4+0 , scale4 +0, 80 + right4, buttom4-0 ),
+         Ott(mV("ש"), 20, scale4+0 , scale4 +0, 93 + right4, buttom4-5 ),
+
+         Ott(mV("כ"), 21, scale4+0 , scale4 +0, 130 + right40, buttom4-6 ),
+         Ott(mV("ב"), 22, scale4+5 , scale4 +5, 150 + right40, buttom4-3 ),
+         Ott(mV("ר"), 23, scale4+0 , scale4 +0, 176 + right40, buttom4-6 ),
+
+         Ott(mV("מ"), 24, scale4+0 , scale4 +0, 215 + right41, buttom4-4 ),
+         Ott(mV("ס"), 25, scale4+0 , scale4 +0, 239 + right41, buttom4-5 ),
+         Ott(mV("פ"), 26, scale4+0 , scale4 +0, 265 + right41, buttom4-2 ),
+         Ott(mV("י"), 27, scale4+0 , scale4 +0, 280 + right41, buttom4-0 ),
+         Ott(mV("ק"), 28, scale4+10 , scale4 +10, 292 + right41, buttom4-15 ),
+
+         Ott(mV("ל"), 28, scale4+0 , scale4 +0, 330 + right42, buttom4-0 ),
+         Ott(mV("כ"), 28, scale4+0 , scale4 +0, 351 + right42, buttom4-5 ),
+         Ott(mV("ו"), 28, scale4+0 , scale4 +0, 362 + right42, buttom4-1 ),
+         Ott(mV("ל"), 28, scale4+0 , scale4 +0, 375 + right42, buttom4-0 ),
+         Ott(mV("ם"), 28, scale4-5 , scale4 -5, 400 + right42, buttom4-1 )
 
 
 
